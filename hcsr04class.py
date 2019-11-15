@@ -14,9 +14,11 @@ class hcsr04:
         GPIO.output(self.pout, GPIO.LOW)
 
         while GPIO.input(self.pin) == 0:
-          pulse_start = time.time()
+            pass
+        pulse_start = time.time()
         while GPIO.input(self.pin) == 1:
-          pulse_end = time.time()
+            pass
+        pulse_end = time.time()
 
         pulse_duration = pulse_end - pulse_start
         distance = pulse_duration * 34000 / 2.0
